@@ -12,7 +12,8 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   RefreshCw,
-  Clock
+  Clock,
+  ShoppingCart
 } from 'lucide-react';
 import {
   AreaChart,
@@ -169,15 +170,15 @@ export const Dashboard: React.FC = () => {
                     <stop offset="95%" stopColor="#6366f1" stopOpacity={0}/>
                   </linearGradient>
                 </defs>
-                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke={theme === 'dark' ? '#334155' : '#e2e8f0'} />
+                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
                 <XAxis dataKey="name" stroke="#94a3b8" fontSize={11} tickLine={false} axisLine={false} />
                 <YAxis stroke="#94a3b8" fontSize={11} tickLine={false} axisLine={false} />
                 <Tooltip 
                   contentStyle={{ 
-                    backgroundColor: theme === 'dark' ? '#0f172a' : '#ffffff',
-                    border: `1px solid ${theme === 'dark' ? '#334155' : '#e2e8f0'}`,
+                    backgroundColor: '#ffffff',
+                    border: '1px solid #e2e8f0',
                     borderRadius: '12px',
-                    color: theme === 'dark' ? '#f1f5f9' : '#0f172a'
+                    color: '#0f172a'
                   }}
                 />
                 <Area type="monotone" dataKey="daromad" stroke="#6366f1" strokeWidth={2.5} fillOpacity={1} fill="url(#colorRevenue)" />

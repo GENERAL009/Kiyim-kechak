@@ -268,7 +268,7 @@ export const InventoryPage: React.FC = () => {
               {txType === 'INCOMING' && 'Zaxiraga Tovar Qabul Qilish (Kirim)'}
               {txType === 'OUTGOING' && 'Zaxiradan Tovar Chiqarish (Chiqim)'}
               {txType === 'TRANSFER' && 'Omborlararo Zaxira Transferi'}
-              {txType === 'ADJUSTMENT' && 'Zaxirani To'g'rilash (Audit)'}
+              {txType === 'ADJUSTMENT' && "Zaxirani To'g'rilash (Audit)"}
             </h3>
 
             <form onSubmit={handleTxSubmit} className="space-y-4">

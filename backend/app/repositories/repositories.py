@@ -10,8 +10,8 @@ from app.models.models import (
 )
 from app.schemas.schemas import (
     RoleCreate, UserCreate, UserUpdate, CategoryCreate, BrandCreate,
-    ProductCreate, ProductUpdate, WarehouseCreate, InventoryCreate, InventoryUpdate,
-    InventoryTransactionCreate, CustomerCreate, OrderCreate
+    ProductCreate, ProductUpdate, ProductVariantCreate, ProductVariantUpdate, WarehouseCreate, InventoryCreate, InventoryUpdate,
+    InventoryTransactionCreate, CustomerCreate, OrderCreate, AuditLogResponse
 )
 
 # ==========================================

@@ -1,0 +1,28 @@
+time="2026-06-08T14:35:10Z" level=warning msg="/root/Kiyim-kechak/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-06-08T14:35:10Z" level=warning msg="Docker Compose requires buildx plugin to be installed"
+ Image kiyim-kechak-frontend Building 
+ Image kiyim-kechak-frontend Building 
+Sending build context to Docker daemon   27.4kB
+Step 1/12 : FROM node:20-alpine as build-stage
+ ---> fb4cd12c85ee
+Step 2/12 : WORKDIR /app
+ ---> Using cache
+ ---> 10bdb667ff87
+Step 3/12 : COPY package.json ./
+ ---> Using cache
+ ---> b9377f5787e4
+Step 4/12 : RUN npm install
+ ---> Using cache
+ ---> e61989f3fcf7
+Step 5/12 : COPY . .
+ ---> Using cache
+ ---> 8b812884966e
+Step 6/12 : RUN npm run build
+ ---> Running in bf07a1e65b37
+
+> clothing-store-wms-frontend@1.0.0 build
+> tsc && vite build
+
+src/pages/Inventory.tsx(271,56): error TS1005: '}' expected.
+src/pages/Inventory.tsx(271,73): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+The command '/bin/sh -c npm run build' returned a non-zero code: 2

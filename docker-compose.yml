@@ -55,6 +55,24 @@ services:
       timeout: 5s
       retries: 5
 
+  seeder:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: wms_seeder
+    restart: "no"
+    env_file:
+      - .env
+    volumes:
+      - ./backend:/app
+      - ./seed.py:/seed.py
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: python /seed.py
+    profiles:
+      - seed
+
   frontend:
     build:
       context: ./frontend
